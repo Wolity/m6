@@ -1,17 +1,22 @@
+<script setup>
+defineProps({
+  game: Object,
+});
+</script>
+game.thumbnail game.title game.short_description game.release_date game.platform
+
 <template>
   <div>
-    <img
-      src="https://image.api.playstation.com/vulcan/ap/rnd/202208/0921/3XopdGAJGRy3xNQKnQDvaCRs.png"
-    />
-    <h1>Title</h1>
-    <p>descreption</p>
+    <img :src="game.thumbnail" />
+    <h1>{{ game.title }}</h1>
+    <p>{{ game.short_descreption }}</p>
     <nav>
       <i class="far fa-clock"></i>
-      <h4>04.04.2004</h4>
+      <h4>{{ game.release_date }}</h4>
     </nav>
     <nav>
       <i class="fas fa-desktop"></i>
-      <h4>Windows</h4>
+      <h4>{{ game.platform }}</h4>
     </nav>
     <router-link to="/">Подробнее</router-link>
   </div>
@@ -49,6 +54,6 @@ a {
   padding: 10px 10px;
   margin-top: 20px;
   margin-left: auto;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 </style>
