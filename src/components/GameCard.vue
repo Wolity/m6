@@ -3,7 +3,6 @@ defineProps({
   game: Object,
 });
 </script>
-game.thumbnail game.title game.short_description game.release_date game.platform
 
 <template>
   <div>
@@ -18,7 +17,9 @@ game.thumbnail game.title game.short_description game.release_date game.platform
       <i class="fas fa-desktop"></i>
       <h4>{{ game.platform }}</h4>
     </nav>
-    <router-link to="/">Подробнее</router-link>
+    <router-link :to="{ name: 'detail', params: { id: game.id } }"
+      >Подробнее</router-link
+    >
   </div>
 </template>
 <style scoped>

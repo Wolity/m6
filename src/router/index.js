@@ -11,7 +11,34 @@ const router = createRouter({
       path: '/fantasy',
       name: 'fantasy',
       component: () => import('../views/Fantasy.vue')
-    }
+    },
+    {
+      path: '/royale',
+      name: 'royale',
+      component: () => import('../views/Battle-Royale.vue')     
+    },
+    {
+      path: '/rpg',
+      name: 'rpg',
+      component: () => import('../views/Rpg.vue')
+    },
+    {
+      path: '/shooter',
+      name: 'shooter',
+      component: () => import('../views/Shooter.vue')
+    },
+    {
+      path: '/strategy',
+      name: 'strategy',
+      component: () => import('../views/Strategy.vue')
+    },
+    {
+      path: '/detail/:id',
+      name: 'detail',
+      component: () => import('../views/Detail.vue')
+    },
+    
+    
   ]
 })
 
